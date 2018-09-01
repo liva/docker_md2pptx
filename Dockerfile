@@ -16,7 +16,8 @@ RUN set -x \
  && rm -rf /var/lib/apt/lists/* \
  && apt -qy autoremove
 RUN wget -q https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-amd64.deb \
- && dpkg -i pandoc-2.2.1-1-amd64.deb
+ && dpkg -i pandoc-2.2.1-1-amd64.deb \
+ && rm pandoc-2.2.1-1-amd64.deb
 
 VOLUME /workspace
 WORKDIR /workspace
